@@ -5,11 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>LAB1</title>
 </head>
-
 	<header id="#header">
 		<h1>Главная Страница. Андрияш 21/2</h1>
 	</header>
 	<body>
+
 		<div class="container">
 			<div class="links">
 				<div class="links__wrapper">
@@ -20,7 +20,7 @@
 							<a href="https://www.kubsu.ru/" title="Главная сайта КубГУ"> 2) Абсолютная гиперссылка на главную сайта kubsu.ru в протоколе https </a>
 						</li>
 						<li>
-							<a " href="https://learn.javascript.ru/" title="Фото на учебник JS">
+							<a href="https://learn.javascript.ru/" title="Фото на учебник JS">
 								3) Ссылка-изображение <br> 
 								<div class="link__item-img">
 									<img src="/img/picture_1.jpg" alt="Фото на учебник JS" width="500" >
@@ -68,7 +68,7 @@
 						<li> <a title="NotAlink"> 17) Ссылка без href </a> </li>
 						<li> <a href="https://yandex.ru/yaintern/frontend" title="in страница" rel="nofollow"> 18) Ссылка, по которой запрещён переход поисковикам </a> </li>
 						<li>
-								<a href="https://yandex.ru/yaintern/frontend"> <meta name="robots" content="noindex, nofollow">19) Ссылка, запрещенная для индексации поисковиками</a>							<!-- </noindex> -->
+								<a href="https://yandex.ru/yaintern/frontend"> <meta name="noindex" content="noindex, nofollow">19) Ссылка, запрещенная для индексации поисковиками</a>							<!-- </noindex> -->
 						</li>
 						<li> 20) Нумерованный список ссылок с подписями title
 							<ol>
@@ -93,8 +93,9 @@
 									</label>
 								</div>
 								<div> 
-									<label ><input id="email" type="email" name="email" placeholder="Email"> </div>
+									<label ><input id="email" type="email" name="email" placeholder="Email"> 
 									</label>
+								</div>
 								<div> 
 									<label for="date">Ваша дата рождения</label>
 									<input id="date" type="date" name="date"> </div>
@@ -127,7 +128,7 @@
 								</div>
 								<textarea name="Bio" placeholder="Биография" cols="35" rows="10"></textarea>
 								<div>
-									<input type="checkbox" name="agree" id="Kontr">
+									<input type="checkbox" name="agree" id="agree">
 									<label for="agree"> С контрактом ознакомлен(а) </label>
 								</div>
 								<div> <button type="submit"> Сохранить </button> </div>
@@ -141,6 +142,6 @@
 		</div>
 		
 
-	</body>
+
 </body>
 </html>
