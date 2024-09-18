@@ -1,0 +1,98 @@
+
+
+body{
+    margin: 0;
+}
+a:hover{
+    text-decoration: none;
+    color: #000;
+
+}
+#header, #footer
+{
+    width: 100%;
+    background-color: #ccc;
+    padding: 20px;
+    height: 120px;
+}
+.content
+{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.img
+{
+    float: left;
+    margin: 10px;
+    width: 90px;
+    height: 90px;
+}
+#nav{
+    display: block;
+    width: 500px;
+    margin-left: auto;
+}
+
+#nav > div
+{
+    
+    display: inline-block;
+    height: 30px;
+    
+    padding: 10px ;
+
+}
+
+.site_wrapper
+{
+    margin-top: 10px;
+}
+.wrapper
+{
+    padding: 8px;
+    margin: 10px 0;
+    background-color: lightblue;
+    text-align: center;
+}
+.wrapper > div
+{
+    margin: 10px 0;
+}
+#table
+{
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+#table, #table td
+{
+    border: 3px solid black;
+}
+#table td
+{
+    padding: 11px;
+    text-align: center;
+}
+
+#table tr:nth-child(even)
+{
+    background-color: #ff7070
+}
+#table tr:nth-child(odd)
+{
+    background-color: #65c8c1;
+}
+.blok > form
+{
+    background-color: #f6f6f6;
+    width: 500px;
+    margin: 5px auto;
+    padding: 2px 0;
+}
+.blok > form > div
+{
+    margin: 5px 0;
+}
+#footer > div > div
+{
+    margin-left: 150px;
+}
