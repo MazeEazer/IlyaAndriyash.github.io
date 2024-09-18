@@ -81,17 +81,7 @@ a:hover{
 {
     background-color: #65c8c1;
 }
-.blok > form
-{
-    background-color: #f6f6f6;
-    width: 500px;
-    margin: 5px auto;
-    padding: 2px 0;
-}
-.blok > form > div
-{
-    margin: 5px 0;
-}
+
 #footer > div > div
 {
     margin-left: 150px;
