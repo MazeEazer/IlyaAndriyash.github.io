@@ -1,0 +1,344 @@
+@charset "UTF-8";
+/**
+  Нормализация блочной модели
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  Убираем внешние отступы body и двум другим тегам,
+  у которых есть атрибут class
+ */
+body {
+  margin: 0;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol
+{
+  margin-block: 0;
+}
+
+/**
+  Убираем стандартный маркер маркированному списку,
+  у которого есть атрибут class
+ */
+/* ul {
+  list-style: none;
+} */
+
+/**
+  Обнуляем вертикальные внешние отступы параграфа,
+  объявляем локальную переменную для внешнего отступа вниз,
+  чтобы избежать взаимодействие с более сложным селектором
+ */
+p {
+  margin-block: 0;
+}
+
+/**
+  Внешний отступ вниз для параграфа без атрибута class,
+  который расположен не последним среди своих соседних элементов
+ */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:root {
+  --color-dark: #191A23;
+  --color-dark-alt: #292A32;
+  --color-light: #FFFFFF;
+  --color-accent: #B9FF66;
+  --color-gray: #F3F3F3;
+  --color-gray-alt: #898989;
+  --border: 1px solid var(--color-dark);
+  --border-radius: 14px;
+  --input-height: 59px;
+  --button-height: 68px;
+  --transition-duration: 0.2s;
+}
+
+.container {
+  max-width: 960px;
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+  background-color: var(--color-gray);
+}
+
+
+
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+a,
+input
+{
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: var(--color-dark);
+}
+
+
+
+
+h1, .h1 {
+  font-size: clamp(43px, 4.1666666667vw, 60px);
+}
+
+h2, .h2 {
+  font-size: clamp(36px, 2.7777777778vw, 40px);
+}
+
+h3, .h3 {
+  font-size: clamp(26px, 2.0833333333vw, 30px);
+}
+
+h4, .h4 {
+  font-size: clamp(18px, 1.3888888889vw, 20px);
+}
+
+
+
+.contact-us__checkbox{
+  margin-bottom: 20px;
+}
+.radios {
+  display: flex;
+  column-gap: 35px;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
+  transition-duration: var(--transition-duration);
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--button-height);
+  padding-inline: 35px;
+  font-size: 20px;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+.button--transparent {
+  color: var(--color-dark);
+  background-color: transparent;
+}
+.button--accent {
+  color: var(--color-dark);
+  background-color: var(--color-accent);
+}
+
+
+
+.header {
+  background-color: var(--color-gray-alt);
+}
+ 
+.header__inner {
+	padding: 10px;
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+}
+
+.header__menu {
+  margin-left: auto;
+  font-size: 20px;
+  display: flex;
+}
+.header__menu-list {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 40px;
+  list-style: none;
+}
+
+.header__menu-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+}
+.header__nav-wrapper{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.header__title-wrapper{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.header__menu-link::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  translate: -50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-dark);
+  transition-duration: var(--transition-duration);
+}
+
+.header__menu-link:hover::after {
+	width: 100%;
+}
+  
+.header__title {
+	padding-top: 10px;
+	padding-inline: 18px;
+  font-size: 29px;
+}
+
+.process{
+  padding-block: 30px;
+}
+.process__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  align-items: center;
+}
+
+
+.process__item a:hover {
+  color: green; /* Изменяем цвет текста ссылки при наведении */
+}
+.item-img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item-img1{
+  text-align: center;
+}
+#table
+{
+    padding-top: 5px;
+    padding-block: 30px;
+    margin-inline:  auto;
+    border-collapse: collapse;
+}
+
+#table, #table td, #table th
+{
+    border: 2px solid var(--color-dark);
+}
+#table td
+{
+    padding: 10px;
+    text-align: center;
+}
+#table thead tr
+{
+    background-color: #d5d5d5! important;
+}
+#table tr:nth-child(even)
+{
+    background-color: var(--color-gray)
+}
+#table tr:nth-child(odd)
+{
+    background-color: var(--color-gray-alt);
+}
+
+
+.section{
+  margin-block: 20px;
+}
+
+.contact-us__form, .contact-us__body {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  
+}
+
+.contact-us__body {
+  row-gap: 25px;
+  padding: 20px;
+}
+.field {
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 5px;
+}
+
+
+
+.field__input {
+  width: 100%;
+  height: var(--input-height);
+  padding-inline: 30px;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  border: 1px solid var(--color-dark);
+  border-radius: var(--border-radius);
+}
+
+
+.field__input::placeholder {
+  color: var(--color-dark);
+}
+.field__input--textarea {
+  height: 190px;
+  padding-block: 18px;
+  resize: none;
+}
+
+.field__input--option{
+  width: 100%;
+  border: 1px solid var(--color-dark);
+  border-radius: var(--border-radius);
+  padding-inline: 30px;
+
+}
+
+.footer{
+  background-color: var(--color-gray-alt);
+
+}
+.footer__inner {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  margin: 0 auto;
+  height: 100px;
+}
+.button:hover {
+  color: var(--color-dark);
+  background-color: var(--color-accent);
+  transition-duration: var(--transition-duration);
+}
