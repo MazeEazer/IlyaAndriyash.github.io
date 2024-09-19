@@ -2,6 +2,7 @@
 
 body{
     margin: 0;
+    background-color: lavender;
 }
 a:hover{
     text-decoration: none;
@@ -33,7 +34,7 @@ a:hover{
     margin-left: auto;
 }
 
-#nav > div
+#nav .nav__item
 {
     
     display: inline-block;
@@ -43,7 +44,7 @@ a:hover{
 
 }
 
-.site_wrapper
+.site__wrapper
 {
     margin-top: 10px;
 }
@@ -54,10 +55,7 @@ a:hover{
     background-color: lightblue;
     text-align: center;
 }
-.wrapper > div
-{
-    margin: 10px 0;
-}
+
 #table
 {
     margin: 0 auto;
@@ -82,7 +80,13 @@ a:hover{
     background-color: #65c8c1;
 }
 
-#footer > div > div
+#footer .footer__title
 {
     margin-left: 150px;
+    color: black;
+
+
+}
+#footer .footer__title:hover{
+    color: rgb(25, 198, 228);
 }
