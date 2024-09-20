@@ -11,8 +11,10 @@ a:hover{
 }
 #header, #footer
 {
+       box-sizing: border-box;
     width: 100%;
     background-color: #ccc;
+    padding: 20px;
     height: 120px;
 }
 .content
