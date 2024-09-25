@@ -5,22 +5,31 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="/style2.css">
+  <link rel="stylesheet" href="/style.css">
   <title>MYWEBSITE</title>
 </head>
 <body>
   <header id="up" class="header">
     <div class="header__inner container">
-      <a class="header__logo logo" href="/">
-        <img
-          class="logo__image"
-          src="/image2.png"
-          alt="Positivus"
-          width="120" height="100" loading="lazy"
-        />
-      </a>
+		<div class="header__logo-wrapper">
+			<a class="header__logo" href="/">
+				<img
+				class="logo__image"
+				src="/image2.png"
+				alt="Positivus"
+				width="120" height="100" loading="lazy"
+				/>
+			</a>
+	</div>
 	  <div class="header__nav-wrapper">
-		<nav class="header__menu ">
+		<div class="header__title-wrapper">
+			<div
+				class="header__title title title--transparent"
+				>
+				Мой Веб-сайт
+			</div>
+		</div>
+		<nav id="nav" class="header__menu ">
 			
 				<ul class="header__menu-list">
 				<li class="header__menu-item">
@@ -35,14 +44,7 @@
 			
 	
 		</nav>
-		<div class="header__title-wrapper">
-			<div
-				class="header__title title title--transparent"
-				type="button"
-				>
-				Мой Веб-сайт
-			</div>
-		</div>
+		
 	</div>
    
     </div>
@@ -50,10 +52,9 @@
 
  
 
-  
-    <section class="section container">
+  <section class="section container main">
+
  
-      <div class="section__body">
         <div class="process">
 			<ul class="process__list" >
 				<li  class="process__item">
@@ -61,9 +62,8 @@
 				<li class="process__item">
 					<a href="https://www.kubsu.ru/" title="Главная сайта КубГУ"> 2) Абсолютная гиперссылка на главную сайта kubsu.ru в протоколе https </a>
 				</li>
-				<li class="process__item item-img1">
-					<a href="https://learn.javascript.ru/" title="Фото на учебник JS">
-						3) Ссылка-изображение <br> 
+				<li class="process__item1 item-img1">
+					<a class="not" href="https://learn.javascript.ru/" title="Фото на учебник JS">
 						<div class="link__item-img">
 							<img src="/img/picture_1.jpg" alt="Фото на учебник JS" width="500" >
 						</div>
@@ -123,54 +123,51 @@
 				</li class="process__item">
 				<li class="process__item"> <a href ="ftp://user:password@ftp.example.com/path/to/file.txt" title="Пример файла"> 21) Ссылка на файл на сервере FTP с авторизацией </a> </li>
         </div>
-      </div>
-    </section>
-	<section class="section container">
 		<div class="table__wrapper">
 		<table id="table">
 			<caption>ТАБЛИЦА</caption>
 			<thead>
 				<tr>
-					<th> Дни недели </th>
-					<th> Колонна 2 </th>
-					<th> Колонна 3 </th>
-					<th> Колонна 4 </th>
-					<th> Колонна 5 </th>
-					<th> Колонна 6 </th>
+					<th> days </th>
+					<th> col2 </th>
+					<th> col3 </th>
+					<th> col4 </th>
+					<th> col5 </th>
+					<th> col6 </th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td> ПН </td>
-					<td> ВТ </td>
-					<td> СР </td>
-					<td> ЧТ </td>
-					<td> ПТ </td>
-					<td> СБ </td>
+					<td> asg </td>
+					<td> ВsdfgТ </td>
+					<td> sdfg </td>
+					<td> gg </td>
+					<td> sdfg </td>
+					<td> gg </td>
 				</tr>
 				<tr>
-					<td> МАТАН </td>
-					<td> ЛИНАЛ </td>
-					<td> ООП </td>
-					<td> ВЕБ </td>
-					<td> ВЕБ </td>
-					<td rowspan="2"> КСРС </td>
+					<td> ss </td>
+					<td> dd </td>
+					<td> qq </td>
+					<td> gfr </td>
+					<td> drh </td>
+					<td rowspan="2"> fff </td>
 				</tr>
 				<tr>
-					<td> ФИЗРА </td>
-					<td> АНГЛ </td>
-					<td colspan="3" rowspan="3"> ДИФФУРЫ </td>
+					<td> sdfg </td>
+					<td> sdfg </td>
+					<td colspan="3" rowspan="3"> f </td>
 					
 				
 				</tr>
 				<tr>
-					<td> МАТАН </td>
-					<td> ЛИНАЛ </td>
-					<td rowspan="2"> КСРС </td>
+					<td> fff </td>
+					<td> ffff </td>
+					<td rowspan="2"> ffff </td>
 				</tr>
 				<tr>
-					<td> ДИСМАТ </td>
-					<td> КОМПЛАН </td>
+					<td> asdf </td>
+					<td> adsf </td>
 			
 				</tr>
 				<tr>
@@ -189,11 +186,12 @@
 				</tr>
 			</tbody>
 			<tfoot>
-				<td rowspan="7" colspan="6"> РАСПИСАНИЕ </td>
+				<td rowspan="7" colspan="6"> ffff </td>
 			</tfoot>
 		</table>	
+			</div>
+
 	  </section>
-	</div>
 
 
  
