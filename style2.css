@@ -1,21 +1,20 @@
 @charset "UTF-8";
-/**
-  Нормализация блочной модели
- */
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/*
-  Убираем внешние отступы body и двум другим тегам,
-  у которых есть атрибут class
- */
 body {
   margin: 0;
 }
-
+ul li{
+	list-style: none;
+}
+ul{
+	padding-inline-start: 0;
+}
 
 h1,
 h2,
@@ -27,30 +26,15 @@ p,
 ul,
 ol
 {
-  margin-block: 0;
+  margin: 0;
 }
 
-/**
-  Убираем стандартный маркер маркированному списку,
-  у которого есть атрибут class
- */
-/* ul {
-  list-style: none;
-} */
 
-/**
-  Обнуляем вертикальные внешние отступы параграфа,
-  объявляем локальную переменную для внешнего отступа вниз,
-  чтобы избежать взаимодействие с более сложным селектором
- */
 p {
   margin-block: 0;
 }
 
-/**
-  Внешний отступ вниз для параграфа без атрибута class,
-  который расположен не последним среди своих соседних элементов
- */
+
 
 img {
   display: block;
@@ -102,19 +86,19 @@ a {
 
 
 h1, .h1 {
-  font-size: clamp(43px, 4.1666666667vw, 60px);
+  font-size: 43px;
 }
 
 h2, .h2 {
-  font-size: clamp(36px, 2.7777777778vw, 40px);
+  font-size: 36px;
 }
 
 h3, .h3 {
-  font-size: clamp(26px, 2.0833333333vw, 30px);
+  font-size: 26px;
 }
 
 h4, .h4 {
-  font-size: clamp(18px, 1.3888888889vw, 20px);
+  font-size: 18px;
 }
 
 
@@ -158,81 +142,80 @@ h4, .h4 {
 
 
 
-.header {
+#header {
   background-color: var(--color-gray-alt);
 }
- 
-.header__inner {
-	padding: 10px;
-  display: flex;
-  align-items: center;
-  column-gap: 40px;
+.header__logo-wrapper{
+	background-color: var(--color-gray-alt);
+	width: 120px;
+	
+	padding: 7px;
+	float: left;
+
 }
 
 .header__menu {
-  margin-left: auto;
   font-size: 20px;
-  display: flex;
+  margin-top: 10px;
+  background-color:#d5d5d5;
 }
 .header__menu-list {
-  display: flex;
-  justify-content: space-between;
-  column-gap: 40px;
-  list-style: none;
+
+	display: flex;
+  flex-direction: column; /* Вертикальный список на мобильных устройствах */
+  row-gap: 10px; /* Отступ между элементами меню */
+  width: 100%; /* Полная ширина для элементов меню */
+  text-align: center; /* Центрирование текста в элементах меню */
 }
 
-.header__menu-link {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  height: 48px;
-}
-.header__nav-wrapper{
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-}
-.header__title-wrapper{
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-}
-.header__menu-link::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  translate: -50%;
-  width: 0;
-  height: 2px;
-  background-color: var(--color-dark);
-  transition-duration: var(--transition-duration);
-}
 
-.header__menu-link:hover::after {
-	width: 100%;
-}
+
+
   
 .header__title {
+	margin-left: auto;
 	padding-top: 10px;
 	padding-inline: 18px;
   font-size: 29px;
 }
 
 .process{
-  padding-block: 30px;
+
+	padding: 30px;
+	
 }
 .process__list {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
   align-items: center;
+  
 }
 
 
-.process__item a:hover {
-  color: green; /* Изменяем цвет текста ссылки при наведении */
+.process__item a{
+	
+	position: relative;
+	text-decoration: none;
 }
+
+
+
+.process__item a:not(:nth-child(3))::after{
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	translate: -50%;
+	width: 0;
+	height: 2px;
+	background-color: var(--color-dark);
+	transition-duration: var(--transition-duration);
+  }
+  
+  .process__item a:not(:nth-child(3)):hover::after {
+	  width: 100%;
+  }
 .item-img{
   display: flex;
   flex-direction: column;
@@ -241,38 +224,40 @@ h4, .h4 {
 .item-img1{
   text-align: center;
 }
-#table
-{
+#table {
     padding-top: 5px;
     padding-block: 30px;
-    margin-inline:  auto;
+    margin-inline: auto;
     border-collapse: collapse;
 }
 
-#table, #table td, #table th
-{
+#table,
+#table td,
+#table th {
     border: 2px solid var(--color-dark);
 }
-#table td
-{
+
+#table td {
     padding: 10px;
     text-align: center;
 }
-#table thead tr
-{
-    background-color: #d5d5d5! important;
+
+#table thead tr {
+    background-color: #d5d5d5 !important; /* Цвет фона для заголовка */
 }
-#table tr:nth-child(even)
-{
-    background-color: var(--color-gray)
+
+#table tr:nth-child(even) {
+    background-color: var(--color-gray);
 }
-#table tr:nth-child(odd)
-{
+
+#table tr:nth-child(odd) {
     background-color: var(--color-gray-alt);
 }
 
-
 .section{
+	display: flex;
+    flex-direction: column; 
+
   margin-block: 20px;
 }
 
@@ -325,6 +310,9 @@ h4, .h4 {
 
 }
 
+.table__wrapper {
+    order: -1; /* Переместить таблицу выше списка на мобильных устройствах */
+}
 .footer{
   background-color: var(--color-gray-alt);
 
@@ -341,4 +329,97 @@ h4, .h4 {
   color: var(--color-dark);
   background-color: var(--color-accent);
   transition-duration: var(--transition-duration);
+}
+
+
+
+  .header__menu-link {
+	font-size: 16px;
+	font-weight: 700;
+	position: relative;
+	display: inline-flex;
+	text-decoration: none;
+}
+.header__title{
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.header__title-wrapper{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-gray-alt);
+    height: 114px;
+}
+
+  .header__menu-link::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	translate: -50%;
+	width: 0;
+	height: 2px;
+	background-color: var(--color-dark);
+	transition-duration: var(--transition-duration);
+  }
+  
+  .header__menu-link:hover::after {
+	  width: 100%;
+  }
+  .header{
+	background-color: var(--color-gray-alt);
+  }
+
+
+/* Стили для больших экранов (min-width) */
+@media (min-width: 601px) {
+	.header__title-wrapper{
+		background-color: var(--color-gray);
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-start;
+	}
+	.header__title{
+		margin-left: 0;
+	}
+	.header__logo-wrapper{
+		padding: 0px;
+	
+	}
+	
+	.main{
+		display: flex;
+		flex-direction: column;
+	}
+	.header__menu{
+		order: -1;
+		margin-left: auto;
+		background-color:#d5d5d5
+	}
+    .header__menu-list {
+	flex-direction: row;
+	justify-content: space-between;
+ 	column-gap: 40px;
+ 	list-style: none; 
+    }
+	
+	.header__nav-wrapper{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	.header__inner {
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		column-gap: 40px;
+	  }
+
+
+
+	  .table__wrapper{
+		order: 1;
+	  }
 }
