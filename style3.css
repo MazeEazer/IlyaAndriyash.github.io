@@ -55,6 +55,12 @@ a:hover{
     background-color: lightblue;
     text-align: center;
 }
+.wrapper1
+{
+    padding: 8px;
+    margin: 10px 0;
+    background-color: lightblue;
+}
 
 #table
 {
@@ -82,7 +88,7 @@ a:hover{
 
 #footer .footer__title
 {
-    margin-left: 150px;
+    margin-left: 20px;
     color: black;
 
 
