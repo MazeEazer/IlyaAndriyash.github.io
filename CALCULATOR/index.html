@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>To-Do List App</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="todo-app">
+			<h2>SHOP</h2>
+				<form id="form">
+					<div class="row">
+						<input type="text" id="input-box" placeholder="Введите количество товаров">
+					</div>
+					<div class="row">
+
+						<select  id="good" name="goods" >
+							<option name="Keyboard" value="5000" > Клавиатура: 5000 руб </option>
+							<option name="Mouse" value="2500"> Мышь: 2500 руб </option>
+							<option name="Monitor" value="20000"> Монитор: 20000 руб </option>
+							<option name="Microphone" value="5000"> Микрофон: 5000 руб </option>
+							<option name="VideoCard" value="30000"> Видеокарта: 30000 руб </option>
+						</select>
+					</div>
+					<button type="button" class="button">Узнать стоимость</button>
+
+					<div class="price" id="price-container">
+						
+					</div>
+				</form>
+		</div>
+	</div>
+</body>
+<script src="index.js" defer></script>
+</html>
