@@ -34,6 +34,5 @@ document.addEventListener("DOMContentLoaded", () => {
             item.textContent = "Ошибка: введены неверные данные. Пожалуйста, введите число.";
         }
 
-        input.value = ""; // Очищаем инпут после обработки
     });
 });
