@@ -222,7 +222,6 @@ h4, .h4 {
 .item-img{
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 .item-img1{
   text-align: center;
