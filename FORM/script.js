@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function closeModal() {
         modal.classList.remove('active');
-        history.back();
+        history.replaceState(null, '', window.location.pathname); // Убираем хеш #feedback
     }
     
     feedbackForm.addEventListener('submit', (e) => {
