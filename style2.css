@@ -375,7 +375,7 @@ padding-left: 10px;
 
 
 /* Стили для больших экранов (min-width) */
-@media (min-width: 601px) {
+@media (min-width: 577px) {
 	.header__title-wrapper{
 		background-color: var(--color-gray);
 		display: flex;
