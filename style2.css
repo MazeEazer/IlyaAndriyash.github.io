@@ -166,11 +166,11 @@ h4, .h4 {
 .header__menu-list {
 
 	display: flex;
-  flex-direction: column; /* Вертикальный список на мобильных устройствах */
-  row-gap: 10px; /* Отступ между элементами меню */
-  width: 100%; /* Полная ширина для элементов меню */
-  text-align: center; /* Центрирование текста в элементах меню */
-}
+  flex-direction: column; 
+  row-gap: 10px; 
+  width: 100%; 
+text-align: center; 
+    padding-left: 10px;}
 
 
 
