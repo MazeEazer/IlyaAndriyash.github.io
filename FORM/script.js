@@ -56,23 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
     feedbackForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            phone: document.getElementById('phone').value,
-            organization: document.getElementById('organization').value,
-            message: document.getElementById('message').value,
-            consent: document.getElementById('consent').checked,
-        };
-
-        // Отправка данных на сервер
+ 
+        const Data = new FormData(feedbackForm);
         fetch('https://formcarry.com/s/m1h-mKEGfLX', {
             method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
+            headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+            body: JSON.stringify(Object.fromEntries(Data.entries()))
         })
         .then(response => {
             if (response.ok) {
@@ -90,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             errorMessage.style.display = 'block';
             successMessage.style.display = 'none';
             console.error('Ошибка:', error);
-        });
+        }); 
+
     });
 });
