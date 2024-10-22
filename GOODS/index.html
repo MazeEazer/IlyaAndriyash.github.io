@@ -1,65 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shop Calculator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="todo-app">
-            <h2>SHOP</h2>
-            <form id="form">
-                <div class="row">
-                    <input type="text" id="input-box" placeholder="Количество товаров">
-                </div>
-                <div class="row">
-                    <span class="options-label">Тип услуги:</span><br>
-                    
-					<label class="options-label" for="mouse">Мышь</label>
-					<input type="radio" name="service-type" id="mouse" value="Mouse" checked>
-					<label class="options-label" for="VideoCard">Видеокарта</label>
+      <div class="todo-app">
+        <h2>SHOP</h2>
+        <form id="form">
+          <div class="row">
+            <input
+              type="text"
+              id="input-box"
+              placeholder="Количество товаров"
+            />
+          </div>
+          <div class="row">
+            <span class="options-label">Тип услуги:</span><br />
 
-                    <input type="radio" id="VideoCard" name="service-type" value="VideoCard">
-					<label class="options-label" for="monitor">Монитор</label>
-                    <input type="radio" id="monitor" name="service-type" value="Monitor"> 
-                </div>
-                <div class="row" id="option-container">
-                    <label class="options-label" for="options">Выберите опцию:</label>
-                    <select id="options">
-                        <option class="options-label" value="">--Выберите опцию--</option>
-                        <option value="gaming">Игровая (100000 руб)</option>
-                        <option value="video-editing">Для монтажа видео (70000 руб)</option>
-                        <option value="regular">Обычная (10000 руб)</option>
-                    </select>
-                </div>
-                <div class="row" id="property-container" >
+            <label class="options-label" for="mouse">Мышь</label>
+            <input
+              type="radio"
+              name="service-type"
+              id="mouse"
+              value="Mouse"
+              checked
+            />
+            <label class="options-label" for="VideoCard">Видеокарта</label>
 
-				<div class="monitor-option-container">
-					<div class="monitor-item">
-						<label  class="monitor-label"  for="hz120">120 Гц (+20000 руб)</label>
-                    	<input class="monitor-input"   type="checkbox" id="hz120"> 
-					</div>
+            <input
+              type="radio"
+              id="VideoCard"
+              name="service-type"
+              value="VideoCard"
+            />
+            <label class="options-label" for="monitor">Монитор</label>
+            <input
+              type="radio"
+              id="monitor"
+              name="service-type"
+              value="Monitor"
+            />
+          </div>
+          <div class="row" id="option-container">
+            <label class="options-label" for="options">Выберите опцию:</label>
+            <select id="options">
+              <option class="options-label" value="">--Выберите опцию--</option>
+              <option value="gaming">Игровая (100000 руб)</option>
+              <option value="video-editing">
+                Для монтажа видео (70000 руб)
+              </option>
+              <option value="regular">Обычная (10000 руб)</option>
+            </select>
+          </div>
+          <div class="row" id="property-container">
+            <div class="monitor-option-container">
+              <div class="monitor-item">
+                <label class="monitor-label" for="base"
+                  >Базовая комплектация (20000 руб)</label
+                >
+                <input class="monitor-input" type="checkbox" id="base" />
+              </div>
 
-					<div class="monitor-item">
-						<label  class="monitor-label" for="k4">4K (+30000 руб)</label>
-                    	<input class="monitor-input"  type="checkbox" id="k4">
-					</div>
-			
-					<div class="monitor-item">
-						<label class="monitor-label"  for="ips">IPS (+5000 руб)</label>
-                    	<input class="monitor-input"  type="checkbox" id="ips"> 
-					</div>
+              <div class="monitor-item">
+                <label class="monitor-label" for="hz120"
+                  >120 Гц (+20000 руб)</label
+                >
+                <input class="monitor-input" type="checkbox" id="hz120" />
+              </div>
 
-				</div>		
-                </div>
-                <button type="button" class="button">Узнать стоимость</button>
+              <div class="monitor-item">
+                <label class="monitor-label" for="k4">4K (+30000 руб)</label>
+                <input class="monitor-input" type="checkbox" id="k4" />
+              </div>
 
-                <div class="price" id="price-container"></div>
-            </form>
-        </div>
+              <div class="monitor-item">
+                <label class="monitor-label" for="ips">IPS (+5000 руб)</label>
+                <input class="monitor-input" type="checkbox" id="ips" />
+              </div>
+            </div>
+          </div>
+          <button type="button" class="button">Узнать стоимость</button>
+
+          <div class="price" id="price-container"></div>
+        </form>
+      </div>
     </div>
-</body>
-<script src="index.js" defer></script>
+  </body>
+  <script src="index.js" defer></script>
 </html>
