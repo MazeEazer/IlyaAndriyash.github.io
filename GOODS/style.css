@@ -122,7 +122,10 @@ input[type="radio"] {
 label {
   margin-right: auto;
 }
-
+.goods_input {
+  display: flex;
+  flex-grow: 1;
+}
 @media (max-width: 576px) {
   .row {
     margin-bottom: 10px;
